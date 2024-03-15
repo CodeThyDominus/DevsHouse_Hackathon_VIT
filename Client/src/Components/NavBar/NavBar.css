@@ -1,0 +1,18 @@
+nav ul a{
+    color:aliceblue;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    display: block;
+    margin: auto;
+    background:#fff ;
+    transition: 0.5s;
+    border-radius: 2px;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
