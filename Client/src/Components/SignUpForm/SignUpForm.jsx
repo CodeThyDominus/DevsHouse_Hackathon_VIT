@@ -5,7 +5,7 @@ import './SignupForm.css'
 const SignUpForm = () => {
   return (
     <div className='signupform w-[500px] h-[60vh] text-white flex justify-center flex-col gap-4'>
-       <h1>SignUP Here</h1>
+       <h1 className='text-center text-2xl'>Welcome User !</h1>
        <div>
        <form action="" className='flex flex-col gap-2'>
        <TextField id="outlined-basic" label="Full Name" variant="outlined" className='w-[100%]'/>
