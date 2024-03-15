@@ -6,7 +6,8 @@ import DashBoard from './Screens/DashBoard/DashBoard'
 import Dex from './Screens/DeskPage/Dex'
 import PtoP from './Screens/PtoP/PtoP'
 import Transaction from './Screens/Transaction/Transaction'
-import Registration from './Screens/Registration/Registration'
+import Login from './Screens/Login/Login'
+import SignUp from './Screens/SignUp/SignUp'
 
 function App() {
  
@@ -21,7 +22,8 @@ function App() {
         <Route path="/dex" element={ <Dex /> } />
         <Route path="/ptop" element={ <PtoP /> } />
         <Route path="/transaction" element={ <Transaction /> } />
-        <Route path="/registration" element={ <Registration /> } />
+        <Route path="/login" element={ <Login /> } />
+        <Route path="/signup" element={ <SignUp /> } />
       </Routes>
    
     </>
