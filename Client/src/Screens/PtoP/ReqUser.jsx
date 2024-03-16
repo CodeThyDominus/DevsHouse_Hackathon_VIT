@@ -2,8 +2,9 @@ import React from 'react'
 
 function ReqUser({name,email,amount,UpdateBalance}) {
     const Update=()=>{
-        console.log("button clicked");
-        UpdateBalance(amount,email);
+      const pass=window.prompt("Enter the password");
+        
+        UpdateBalance(amount,email,pass);
     }
   return (
     <div className='m-2 bg-blue-200 flex w-[25%] gap-2'>
