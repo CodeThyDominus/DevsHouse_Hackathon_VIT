@@ -12,6 +12,9 @@ app.use('/api',Authrouter);
 
 const PORT=process.env.PORT||8090;
  
+if(process.env.NODE_ENV =="production"){
+    app.use(express.static("Client/dist"));
+}
 mongoose.connection.once("open",()=>{
     console.log("Connected to DataBase");
     app.listen(PORT,(req,res)=>{
