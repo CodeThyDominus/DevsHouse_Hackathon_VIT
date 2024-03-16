@@ -82,7 +82,7 @@ const PtopUser = ({balance,UpdateBalance,email,name}) => {
                                 <div class="modal-body">
                                     <TextField 
                                     required id="outlined-required" 
-                                    label="MetaMask Id" 
+                                    label="Email id" 
                                     variant="outlined"  
                                     value={requestId}
                                     onChange={(e) => setRequestId(e.target.value)}
@@ -117,7 +117,7 @@ const PtopUser = ({balance,UpdateBalance,email,name}) => {
                             <div class="modal-body">
                                 <TextField 
                                 required id="outlined-required" 
-                                label="MetaMask Id" 
+                                label="Email id" 
                                 variant="outlined"  
                                 value={requestId}
                                 onChange={(e) => setRequestId(e.target.value)}
