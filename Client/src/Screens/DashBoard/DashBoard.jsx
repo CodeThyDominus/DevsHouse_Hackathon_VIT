@@ -35,7 +35,9 @@ const DashBoard = ({ handleIndex }) => {
               <p className="card-text"><span class="material-symbols-outlined">
                 attach_money
               </span> {pairs.priceNative}</p>
-              <p className="card-text">{pairs.priceUsd}</p>
+              <p className="card-text"><span class="material-symbols-outlined">
+                universal_currency
+              </span>{pairs.priceUsd}</p>
               <div className='flex gap-3 mt-3'>
                 <a href={pairs.url} className='bg-pink-600 hover:bg-black text-white p-1 rounded-sm' target='blank'>See in details</a>
                 <Link to='/graph' className="border-pink-600 hover:border-white border-2 p-1 text-white rounded-sm" onClick={() => { handleIndex(pairs) }}>Continue</Link>

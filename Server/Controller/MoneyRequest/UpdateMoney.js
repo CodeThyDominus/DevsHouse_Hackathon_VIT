@@ -1,5 +1,6 @@
 const User = require('../../Models/User');
 
+
 const Updatebalance = async (req, res) => {
   try {
     const { id } = req.params;
@@ -23,12 +24,12 @@ const Updatebalance = async (req, res) => {
     const updatedata = await User.findOneAndUpdate(
         { _id: id },
         { $pull: { request: { email:email} } },
-        { new: true } // This option ensures that the updated document is returned
+        { new:true } // This option ensures that the updated document is returned
       );
-
+     
     res.json({
       success: true,
-      message: "Amount added successfully"
+      newdata:updatedata
     });
   } catch (err) {
     console.log(err);

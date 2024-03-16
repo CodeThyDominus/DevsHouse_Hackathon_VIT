@@ -25,7 +25,7 @@ const SignUpForm = () => {
   }
   const submitDataToDb= async()=>{
     try{
-      const {status,data:{data}}= await axios.post("http://localhost:8090/api/signup",{username:name,email,password:pass});
+      const {status,data}= await axios.post("http://localhost:8090/api/signup",{username:name,email,password:pass});
       console.log(status,data.token);
       if(status==200){
         Cookies.set('token',data.token);

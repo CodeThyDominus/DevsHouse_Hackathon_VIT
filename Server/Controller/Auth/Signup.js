@@ -48,12 +48,13 @@ const SignUp=async (req,res)=>{
     try{
     const newuser= new User({name:username,email,pass:hashpassword});
     const response=await newuser.save();
-    const {password,...rest}=response._doc;
+    const {pass,...rest}=response._doc;
     res.json({
     
         sucsess:true,
         message:"Account Created Successfully",
-        data:{...rest,token}
+        ...rest,
+        token
 
     })
    }

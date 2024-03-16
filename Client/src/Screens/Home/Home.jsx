@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div className='home w-screen h-[80vh] justify-around flex bg-[#080808] p-[2rem]'>
         <div data-aos="fade-right" className='transparent flex flex-col justify-center items-center w-[40%]'>
-          <h1 className='text-5xl font-extrabold text-white'>Receive accurate signals on trading opportunities</h1>
+          <h1 className='text-5xl p-3 font-extrabold text-white text-left'>Receive accurate signals on payment opportunities</h1>
           <Link to='/login' className='text-black bg-white mt-3 p-3'>Get Started</Link>
         </div>
         <div data-aos="fade-left" className='flex justify-center items-center flex-col p-3 w-[35%]'>
