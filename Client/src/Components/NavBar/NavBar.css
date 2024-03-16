@@ -28,7 +28,7 @@ nav ul li::after{
     height: 3px;
     display: block;
     margin: auto;
-    background:#fff ;
+    background:#db2777 ;
     transition: 0.5s;
     border-radius: 2px;
 }

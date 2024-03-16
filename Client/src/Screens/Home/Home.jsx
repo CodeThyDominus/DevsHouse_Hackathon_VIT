@@ -16,10 +16,16 @@ const Home = () => {
           <div className='w-[500px] h-[500px]'><img src={banner} alt="" /></div>
         </div>
       </div>
-      <div  className="banner w-screen h-[50vh] bg-[#080808] text-white flex justify-between p-[5rem] items-center">
+      <div className="banner w-screen h-[50vh] bg-[#080808] text-white flex justify-between p-[5rem] items-center">
         <div className='flex justify-center items-center flex-col w-[40%]' data-aos="fade-right">
-          <div className='text-2xl'> Accurate Market Prediction</div>
-          <div className='text-2xl'>Avg income increas</div>
+          <div className='text-2xl'><span className="material-symbols-outlined text-pink-600">
+            monitoring
+          </span> Accurate Market Prediction</div>
+          <div className='text-2xl'>
+            <span className="material-symbols-outlined text-pink-600">
+              trending_up
+            </span>
+            Avg income increas</div>
         </div>
         <div className='w-[30%]' data-aos="fade-left">
           <h1 className='text-white text-xl opacity-70'>Get daily precise cryptocurrency signals helping you automta your trading workflow via real-time forecasts and predications made by AI</h1>

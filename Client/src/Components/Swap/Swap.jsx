@@ -1,8 +1,8 @@
 import React from "react";
-
+import './Swap.css'
 function Swap() {
   return (
-    <div className="gap-3 shadow-lg p-2 shadow-black">
+    <div className="gap-3 shadow-lg p-2 shadow-black bg-slate-300 rounded-sm">
       <div className="w-80 flex justify-between ">
         <h1 className="text-2xl font-semibold">Swap</h1>
         <div>
@@ -23,7 +23,7 @@ function Swap() {
       <div className=" flex justify-between items-center bg-slate-300 p-1 rounded-lg">
         <div className="bg-pink-100 flex w-20 items-center p-2 rounded-lg">
           <h1 className="font-bold">PSWAP</h1>
-          <span class="material-symbols-outlined text-pink-700">expand_more</span>
+          <span class="material-symbols-outlined text-pink-600">expand_more</span>
         </div>
         <span className="text-lg font-bold">0.00</span>
       </div>
