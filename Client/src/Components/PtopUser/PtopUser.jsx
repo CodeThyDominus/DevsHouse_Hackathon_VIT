@@ -6,11 +6,12 @@ import { useState } from "react";
 import { useUser } from '../Context/User';
 import Cookies from 'js-cookie';
 
-const PtopUser = ({balance,UpdateBalance}) => {
+const PtopUser = ({balance,UpdateBalance,email,name}) => {
   //  const history = useHistory();
+    //console.log(user);
     const[toggle,SetToggle]=useState("req");
     const id=Cookies.get('id');
-    console.log(id);
+    console.log(email,name);
     const [requestId,setRequestId] = useState("");
     const [amount,setAmount] = useState(0);
     
@@ -46,7 +47,14 @@ const PtopUser = ({balance,UpdateBalance}) => {
         }
     return (
         <div className='container flex flex-col gap-7 justify-center items-center bg-gray-300 rounded-lg w-3/6 h-4/6 m-auto'>
+            <div className='flex gap-4 items-center'>
             <img className='w-[70px] h-[70px]' src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="" />
+            <div className='flex flex-col gap-2'>
+            <h1 className='text-gray-700 font-bold text-lg'>{name}</h1>
+            <h1 className='text-gray-700 font-bold text-lg'>{email}</h1>
+            </div>
+            </div>
+           
             <div className="btn-section gap-4 flex">
                 <div>
 

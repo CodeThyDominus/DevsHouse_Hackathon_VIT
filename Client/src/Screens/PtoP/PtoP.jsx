@@ -12,7 +12,10 @@ const Ptop = () => {
   //const [user,SetUser]=useState(null);
   const {user}=useUser();
   const[req,SetReq]=useState([]);
-  const[amount,SetAmount]=useState(0)
+  const[amount,SetAmount]=useState(0);
+  const[email,SetEmail]=useState("");
+  const[name,SetName]=useState("");
+  const[toggle,SetToggle]=useState(false);
   //console.log(req);
   // useEffect(()=>{
   //   (async () => {
@@ -46,6 +49,8 @@ const Ptop = () => {
     if (user) {
       SetReq(user.request || []);
       SetAmount(user.amount || 0);
+      SetEmail(user.email||"");
+      SetName(user.name||"");
     }
   }, [user]);
   
@@ -69,14 +74,18 @@ const Ptop = () => {
    const errormessage=(message)=>toast.error(message, {
     theme: "dark",
     })
+    const HandleRequest=()=>{
+        SetToggle(!toggle);
+    }
   return (
     <div className='w-full bg-[#080808] h-[85vh]'>
-     <div>
-     <button className='text-green-900 font-bold bg-green-200 p-2 m-6 rounded-xl'>Requested User</button>
+      <button className='text-green-900 font-bold bg-green-200 p-2 m-6 rounded-xl' onClick={HandleRequest}>Requested User</button>
+    { toggle&&<div className="absolute  rounded-xl bg-black w-fit">
+     
      {req&&req.map(({name,email,amount})=><ReqUser email={email} name={name} amount={amount} UpdateBalance={UpdateBalance}/>)}
-     </div>
+     </div>}
 
-        <PtopUser balance={amount} UpdateBalance={UpdateBalance} />
+       <PtopUser balance={amount} email={email} name={name} UpdateBalance={UpdateBalance} />
         <ToastContainer />
     </div>
   )
