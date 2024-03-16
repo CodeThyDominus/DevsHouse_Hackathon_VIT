@@ -11,6 +11,7 @@ import SignUp from './Screens/SignUp/SignUp'
 import Graph from './Components/Graph/Graph'
 import Cookies from 'js-cookie'
 import { ToastContainer, toast } from 'react-toastify';
+import Footer from './Components/Footer/Footer'
 function App() {
   const[index,SetIndex]=useState(null);
 
@@ -37,7 +38,8 @@ function App() {
         <Route path="/signup" element={ <SignUp /> } />
         <Route path="/graph" element={token? index && <Graph data={index}/>:<Login/> } />
       </Routes>
-   
+    
+    <Footer/>
     </>
   )
 }

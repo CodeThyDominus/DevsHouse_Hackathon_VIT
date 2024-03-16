@@ -65,7 +65,6 @@ function Swap() {
       </div>
       
         <button className="bg-pink-400 p-1 text-center text-xl m-2 text-white mt-6 rounded-lg" onClick={connectToMetaMask}>Connect Account</button>
-    
     </div>
   );
 }
