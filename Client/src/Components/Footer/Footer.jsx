@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import TrustChain from "../../assets/TrustChain.png"
 const Footer = () => {
     return (
-        <div className='footer bg-[#080808] flex justify-evenly items-center gap-28 border-t-2 border-white'>
+        <div className='footer bg-[#080808] flex justify-evenly items-center gap-28 border-t-2 border-white' data-aos="fade-up">
             <div className='flex gap-20'>
                 <div className="h-[300px] w-[300px]">
                     <Link to="/">

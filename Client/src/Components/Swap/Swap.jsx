@@ -29,7 +29,7 @@ function Swap() {
     }
   };
   return (
-    <div className="gap-3 shadow-lg p-2 shadow-black bg-slate-300 rounded-sm">
+    <div className="gap-3 shadow-lg p-2 shadow-black bg-slate-300 rounded-sm" data-aos="fade-left">
       <div className="w-80 flex justify-between ">
         <h1 className="text-2xl font-semibold">Swap</h1>
         <div>

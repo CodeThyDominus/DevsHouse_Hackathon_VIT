@@ -70,7 +70,7 @@ const Ptop = () => {
     theme: "dark",
     })
   return (
-    <div className='w-full bg-[#080808] h-[85vh]'>
+    <div className='w-full bg-[#080808] h-[85vh]' data-aos="fade-down">
      <div>
      <button className='text-green-900 font-bold bg-green-200 p-2 m-6 rounded-xl'>Requested User</button>
      {req&&req.map(({name,email,amount})=><ReqUser email={email} name={name} amount={amount} UpdateBalance={UpdateBalance}/>)}
