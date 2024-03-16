@@ -9,7 +9,7 @@ import ReqUser from './ReqUser'
 const Ptop = () => {
   const id=Cookies.get('id');
   //const [user,SetUser]=useState(null);
-  const {user,setUser}=useUser();
+  const {user}=useUser();
   const[req,SetReq]=useState([]);
   const[amount,SetAmount]=useState(0)
   //console.log(req);
