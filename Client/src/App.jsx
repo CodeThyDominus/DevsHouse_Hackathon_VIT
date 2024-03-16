@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from './Components/NavBar/NavBar'
 import { Routes, Route } from "react-router-dom"
 import Home from './Screens/Home/Home'
@@ -9,6 +9,8 @@ import Transaction from './Screens/Transaction/Transaction'
 import Login from './Screens/Login/Login'
 import SignUp from './Screens/SignUp/SignUp'
 import Graph from './Components/Graph/Graph'
+import Cookies from 'js-cookie'
+import { ToastContainer, toast } from 'react-toastify';
 function App() {
   const[index,SetIndex]=useState(null);
 
@@ -16,19 +18,24 @@ function App() {
          SetIndex(ind);
   }
   console.log(index);
+  const [token,SetToken]=useState(null)
+  useEffect(()=>{
+    const pass=Cookies.get('token'); 
+     SetToken(pass);
+  },[token]);
   return (
     <>
     <NavBar/>
 
     <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="/dashboard" element={ <DashBoard handleIndex={handleIndex}/> } />
-        <Route path="/dex" element={ <Dex /> } />
-        <Route path="/ptop" element={ <PtoP /> } />
-        <Route path="/transaction" element={ <Transaction /> } />
-        <Route path="/login" element={ <Login /> } />
+        <Route path="/dashboard" element={token? <DashBoard handleIndex={handleIndex}/>:<Login/> } />
+        <Route path="/dex" element={token?<Dex />:<Login/> } />
+        <Route path="/ptop" element={token? <PtoP />:<Login/> } />
+        <Route path="/transaction" element={token? <Transaction />:<Login/> } />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={ <SignUp /> } />
-        <Route path="/graph" element={ index && <Graph data={index}/> } />
+        <Route path="/graph" element={token? index && <Graph data={index}/>:<Login/> } />
       </Routes>
    
     </>
