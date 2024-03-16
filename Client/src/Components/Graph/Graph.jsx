@@ -18,7 +18,7 @@ const Graph = ({ data }) => {
             datasets: [{
               label: 'Price Change',
               data: prices,
-              borderColor: 'yellow',
+              borderColor: 'red',
               tension: 0.1
             }]
           },
@@ -39,8 +39,8 @@ const Graph = ({ data }) => {
   }, [data, chart]);
 
   return (
-    <div>
-      <canvas id="chartCanvas" width="400" height="400"></canvas>
+    <div className='flex justify-center bg-[#080808] w-screen h-[90vh]'>
+      <canvas id="chartCanvas" width="2000" height="2000" className='bg-white'></canvas>
     </div>
   );
 };

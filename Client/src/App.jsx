@@ -28,7 +28,7 @@ function App() {
         <Route path="/transaction" element={ <Transaction /> } />
         <Route path="/login" element={ <Login /> } />
         <Route path="/signup" element={ <SignUp /> } />
-        <Route path="/graph" element={ <Graph data={index}/> } />
+        <Route path="/graph" element={ index && <Graph data={index}/> } />
       </Routes>
    
     </>

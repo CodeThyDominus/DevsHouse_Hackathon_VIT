@@ -5,7 +5,7 @@ import TrustChain from "../../assets/TrustChain.png"
 
 const NavBar = () => {
   return (
-    <div className='navbar w-screen h-[15vh] bg-black flex justify-between items-center p-10 sticky top-0 z-20'>
+    <div className='navbarCss w-screen h-[15vh] bg-black flex justify-between items-center p-10 sticky top-0 z-20'>
         <div className="logo">
           <Link to="/">
             <img src={TrustChain} alt="" />

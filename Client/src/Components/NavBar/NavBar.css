@@ -40,6 +40,6 @@ nav ul li:hover::after{
     font-size: 0.8em;
     font-weight: 600;
 }
-.navbar{
+.navbarCss{
     border-bottom: 1px solid white;
 }
